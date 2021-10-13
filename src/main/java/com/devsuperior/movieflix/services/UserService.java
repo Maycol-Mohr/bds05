@@ -23,11 +23,8 @@ public class UserService implements UserDetailsService{
 	@Autowired
 	private UserRepository repository;
 	
-	
 	@Autowired
 	private AuthService authService;
-	
-	
 	
 	@Transactional(readOnly = true)
 	public UserDTO findById(Long id) {
@@ -47,7 +44,4 @@ public class UserService implements UserDetailsService{
 		logger.info("User found: " + username);
 		return user;
 	}
-	
-	
-
 }
